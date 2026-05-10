@@ -1,0 +1,23 @@
+.formulario-envio {
+  max-width: 600px;
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.lista-envios {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.tarjeta-envio {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
