@@ -1,14 +1,16 @@
 import { Navigate } from "react-router-dom";
-import useAuth from "../../hooks/useAuth";
 
 function RutaProtegida({ children, soloAdmin = false }) {
-  const { usuario } = useAuth();
+  const usuarioDemo = {
+    nombre: "Cliente Demo",
+    rol: "cliente",
+  };
 
-  if (!usuario) {
+  if (!usuarioDemo) {
     return <Navigate to="/login" replace />;
   }
 
-  if (soloAdmin && usuario.rol !== "admin") {
+  if (soloAdmin && usuarioDemo.rol !== "admin") {
     return <Navigate to="/" replace />;
   }
 

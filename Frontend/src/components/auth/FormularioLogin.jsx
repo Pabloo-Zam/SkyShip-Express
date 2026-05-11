@@ -1,11 +1,6 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import useAuth from "../../hooks/useAuth";
 
 function FormularioLogin() {
-  const navigate = useNavigate();
-  const { login } = useAuth();
-
   const [formulario, setFormulario] = useState({
     correo: "",
     password: "",
@@ -20,13 +15,7 @@ function FormularioLogin() {
 
   const manejarSubmit = (e) => {
     e.preventDefault();
-    login(formulario);
-
-    if (formulario.correo === "admin@skyship.com") {
-      navigate("/admin");
-    } else {
-      navigate("/mis-envios");
-    }
+    alert("Login de prueba funcionando");
   };
 
   return (
@@ -39,7 +28,6 @@ function FormularioLogin() {
         onChange={manejarCambio}
         required
       />
-
       <input
         type="password"
         name="password"
@@ -48,7 +36,6 @@ function FormularioLogin() {
         onChange={manejarCambio}
         required
       />
-
       <button type="submit" className="boton-principal">
         Iniciar sesión
       </button>
